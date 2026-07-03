@@ -1,0 +1,73 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+.info {
+    color: white;
+    font-size: 18px;
+}
+
+#question {
+    color: white;
+    font-size: 28px;
+    margin: 20px;
+}
+
+#gameArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.option {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    transition: transform 0.2s;
+}
+
+.option:hover {
+    transform: scale(1.1);
+}
+
+.text-option {
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#message {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
