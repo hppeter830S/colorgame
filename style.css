@@ -14,6 +14,53 @@ h1 {
     color: white;
 }
 
+.color-palette {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+}
+
+.color-palette h3 {
+    color: white;
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+#colorPalette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.palette-swatch {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    border: 2px solid white;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.palette-label {
+    font-size: 9px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 2px 4px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 90%;
+    word-break: break-word;
+}
+
 .info {
     color: white;
     font-size: 18px;

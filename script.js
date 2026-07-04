@@ -6,7 +6,48 @@ const colors = [
     { fr: "VIOLET", color: "purple" },
     { fr: "NOIR", color: "black" },
     { fr: "BLANC", color: "white" },
-    { fr: "ROSE", color: "pink" }
+    { fr: "ROSE", color: "pink" },
+    { fr: "ORANGE", color: "orange" },
+    { fr: "MARRON", color: "brown" },
+    { fr: "GRIS", color: "gray" },
+    { fr: "CYAN", color: "cyan" },
+    { fr: "MAGENTA", color: "magenta" },
+    { fr: "OR", color: "#FFD700" },
+    { fr: "ARGENT", color: "#C0C0C0" },
+    { fr: "MARINE", color: "navy" },
+    { fr: "CORAIL", color: "coral" },
+    { fr: "TURQUOISE", color: "turquoise" },
+    { fr: "CITRON VERT", color: "lime" },
+    { fr: "INDIGO", color: "indigo" },
+    { fr: "BORDEAUX", color: "maroon" },
+    { fr: "BEIGE", color: "beige" },
+    { fr: "OLIVE", color: "olive" },
+    { fr: "SARCELLE", color: "teal" },
+    { fr: "CRAMOISI", color: "crimson" },
+    { fr: "LAVANDE", color: "lavender" },
+    { fr: "SAUMON", color: "salmon" },
+    { fr: "MENTHE", color: "#98FF98" },
+    { fr: "ABRICOT", color: "#FBCEB1" },
+    { fr: "POURPRE", color: "#800080" },
+    { fr: "FUCHSIA", color: "fuchsia" },
+    { fr: "CHOCOLAT", color: "chocolate" },
+    { fr: "CIEL", color: "skyblue" },
+    { fr: "PÊCHE", color: "peachpuff" },
+    { fr: "PRUNE", color: "plum" },
+    { fr: "KAKI", color: "khaki" },
+    { fr: "TOMATE", color: "tomato" },
+    { fr: "ORCHIDÉE", color: "orchid" },
+    { fr: "SIENNA", color: "sienna" },
+    { fr: "ÉMERAUDE", color: "#50C878" },
+    { fr: "RUBIS", color: "#E0115F" },
+    { fr: "AMBRE", color: "#FFBF00" },
+    { fr: "AUBERGINE", color: "#614051" },
+    { fr: "CANARD", color: "#048B9A" },
+    { fr: "FRAMBOISE", color: "#E30B5C" },
+    { fr: "MOUTARDE", color: "#FFDB58" },
+    { fr: "CHARBON", color: "#36454F" },
+    { fr: "IVOIRE", color: "ivory" },
+    { fr: "LILAS", color: "#C8A2C8" }
 ];
 
 let score = 0;
@@ -127,4 +168,25 @@ function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
+function renderColorPalette() {
+    const palette = document.getElementById("colorPalette");
+    if (!palette) return;
+
+    palette.innerHTML = "";
+    colors.forEach(({ fr, color }) => {
+        const swatch = document.createElement("div");
+        swatch.classList.add("palette-swatch");
+        swatch.style.backgroundColor = color;
+        swatch.title = fr;
+
+        const label = document.createElement("span");
+        label.classList.add("palette-label");
+        label.innerText = fr;
+
+        swatch.appendChild(label);
+        palette.appendChild(swatch);
+    });
+}
+
+renderColorPalette();
 startGame();
